@@ -1,0 +1,8 @@
+name: vaxenv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - seaborn=0.11.2
+  - imageio=2.25
+  - pandas=1.4.4
