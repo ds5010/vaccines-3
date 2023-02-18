@@ -4,7 +4,7 @@
 #This is option 2 for how we could make a gif. 
 #The function actually reads a folder for the images so the user would not have to change anything, but its important that the files are named correctly when they are saved/created
 
-import imageio as iio
+import imageio.v2 as iio
 import os
 
 def create_gif(filename_save):
@@ -16,7 +16,7 @@ def create_gif(filename_save):
     images = list()
 
     #this part looks at the img directory and reads in all the files that end with .png (only going to bring in those)
-    for filename in sorted(os.listdir('img')):
+    for filename in sorted(os.listdir('img')),key= lambda x: os.path.getmtime(os.path.join('img',x))):
         if filename[-4:] == '.png' and not filename == 'comparison.png':
             f = os.path.join('img',filename)
             im = iio.imread(f)
