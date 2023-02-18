@@ -1,15 +1,17 @@
 import pandas as pd
 
-def vaccines(desired_date):
+def readfile():
+    input_filename = "./data/COVID-19_Vaccinations_in_the_United_States_County.csv.gz"
+    df = pd.read_csv(input_filename, compression="gzip", converters={'FIPS' : str})
+    return df
+
+def vaccines(desired_date, df):
     """Sample one date from the source dataset and write it to an intermediate file
     Parameters:
         desired_date: str, date to be sampled for vaccine completedness
     """
-    input_filename = "./data/COVID-19_Vaccinations_in_the_United_States_County.csv.gz"
-    df = pd.read_csv(input_filename, compression="gzip", converters={'FIPS' : str})
     print("START:", df.shape)
     
-
     # Filter by date
     desired_date = desired_date.replace("-", "/")
     df = df[df["Date"] == desired_date]
@@ -36,8 +38,9 @@ def create_vaccines():
     """
     months=pd.read_csv("months.csv")
     dates=months.date.to_list()
+    df = readfile()
     for date in dates:
-        vaccines(date)
+        vaccines(date, df)
 
 if __name__ == "__main__":
     create_vaccines()
