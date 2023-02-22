@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Explanation of data analysis showing effectiveness of COVID-19 vaccine in US in 2021">
-  <meta name="author" content="The students in DS5010 Spring 2022, with thanks to Bootstrap">
+    content="An update to the repository created by students in DS5010 Spring 2022, done by the students in DS5010 Spring 2023.">
+  <meta name="author" content="The students in DS5010 Spring 2022 & 2023, with thanks to Bootstrap">
   <meta name="generator" content="Hugo 0.88.1">
   <title>DS5010 COVID Vaccine Project</title>
 
@@ -55,7 +55,7 @@
             <a class="nav-link active" aria-current="page" href="#visuals">Visuals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#analysis">Analysis</a>
+            <a class="nav-link active" href="#updates">Updates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#acknowledgements">Acknowledgements</a>
@@ -82,17 +82,15 @@
 
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Exploring COVID-19 Vaccine Effectiveness</h1>
-        <p class="col-md-8 fs-4">This project is an exploratory data analysis (EDA) of COVID-19 vaccine effectiveness
-          compiled by a group of aspiring data scientists at The Roux Institute. The team decided to examine commonly
-          used COVID-19 information sources (<a
+        <h1 class="display-5 fw-bold">COVID-19 Vaccine Effectiveness</h1>
+        <p class="col-md-8 fs-4">This site displays the updates to a repository originally constructed by the DS5010 Spring 2022 class when performing data analysis by combining information from common COVID-19 data sources (<a
             href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh">Center
             For Disease Control and Prevention</a> and <a
             href="https://github.com/CSSEGISandData/COVID-19/tree/f57525e860010f6c5c0c103fd97e2e7282b480c8">Johns
-            Hopkins University</a>) and visualize the relationship between Covid-19 vaccinations and deaths the United
-          States between 5/31/21 - 11/30/21.</p>
-        <p>For more information about the data (including the data processing/cleaning preformed for this project),
-          please visit the <a href="https://github.com/ds5010/vaccines">project repository</a>.</p>
+            Hopkins University</a>). This was used to visualize the relationship between Covid-19 vaccinations and deaths the United
+          States between 5/31/21 - 1/24/2023.</p>
+        <p>For more information about the original repository and its data (including the data processing/cleaning performed), please visit the <a href="https://github.com/ds5010/vaccines">original project repository</a>.</p>
+		<p>For more insight into the updated repository and changes to its data, please visit the <a href="https://github.com/ds5010/vaccines-3/">updated project repository</a>.</p>
       </div>
     </div>
 
@@ -101,29 +99,29 @@
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>National View</h2>
           <div class="ratio ratio-4x3">
-            <img src="https://raw.githubusercontent.com/ds5010/vaccines/main/img/animation.gif" class="img-fluid">
+            <img src="https://raw.githubusercontent.com/ds5010/vaccines-3/main/img/animation.gif" class="img-fluid">
           </div>
           <p class="col-md-8 fs-4">Methodology</p>
           <p>To assess the effectiveness of the vaccination over time, the % of the vaccinated population over 18 years
-            of age (CDC) is compared to Covid related deaths per 100k (JHU). The data was broken down by U.S. region
+            of age (CDC) was compared to Covid related deaths per 100k (JHU). The data was broken down by U.S. region
             (West, Midwest, South, Northeast) based on the <a
               href="https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf">Center For Census Bureau
-              regional divisions</a>, and a snapshot was of data was taken at the of each month to create a more
+              regional divisions</a>, and a snapshot was of data was taken at the end of each month to create a more
             accurate representation. Because the JHU cumulates deaths, the time series was adjusted to compute the
-            difference in death figures between dates.</p>
+            difference in death figures between dates. Due to changes in reporting measures, starting in June 2022, rather than reflecting the last day of the month, the data reflects the last Wednesday of the month.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>County View</h2>
           <div class="ratio ratio-4x3">
-            <img src="https://raw.githubusercontent.com/ds5010/vaccines/main/img/comparison.png" class="img-fluid">
+            <img src="https://raw.githubusercontent.com/ds5010/vaccines-3/main/img/comparison.png" class="img-fluid">
           </div>
           <p class="col-md-8 fs-4">Methodology</p>
-          <p>Similar to the National View, this analysis is comparing the number of deaths and vaccination percentages
+          <p>Similarly to the National View, this analysis is comparing the number of deaths and vaccination percentages
             over the same time period. However, the visualization shows a county-level comparison between Kent County,
             RI and Tuscaloosa County, AL.</p>
-          <p>The team selected Kent County and Tuscaloosa County due to their similar population demographics, but
+          <p>The original team selected Kent County and Tuscaloosa County due to their similar population demographics, but
             highly different rates of vaccination to see the impact (if any) on death rates due to COVID-19. The same
             JHU and CDC data sources were used.</p>
         </div>
@@ -131,36 +129,17 @@
 
       <div class="container">
 
-        <div class="p-5 mb-4 bg-light rounded-3" id="analysis">
+        <div class="p-5 mb-4 bg-light rounded-3" id="updates">
           <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">Analysis</h1>
-            <p class="col-md-8 fs-4">National View</p>
-            <p>The proportion of the population that is vaccinated increases over the time frame, which you can see as
-              the bubbles move from left to right. The quantity of deaths increases as well month-by-month, which makes
-              sense: more deaths accumulate each month while the denominator (the 2019 Census population) stays the
-              same. We also know that the Delta variant hit during this time period, which was much more contagious than
-              previous strains: we should expect deaths to increase.</p>
-            <p>However, consider the trajectories of the large bubbles (representing highly populous counties) vs. their
-              smaller counterparts. The largest bubbles progress steadily into the 70-80% vaccinated range by the end of
-              the timeframe, and their rate of deaths generally tops out at 100 deaths/100K people. Many smaller bubbles
-              struggle to reach the 50% vaccinated mark, and several of their death rates soar into the 300-400
-              deaths/100K range. Comparing these two groups suggest that vaccination is highly effective–otherwise the
-              more highly-populated areas would likely have similar (or even worse) death rates, given the physical
-              proximity of the population in these urban centers.</p>
-            <p>Regional differences prove to be fertile ground for continued research. Many of the small blue dots,
-              representing counties in the South, don’t reach the 50% vaccinated threshold. However, the large blue
-              bubbles (representing urban areas in the South) follow a more direct left-to-right trajectory–and
-              tellingly, keep their death rates low.</p>
-            <p>These findings suggest that behavioral differences in rural vs. urban communities (mask wearing, social
-              distancing, etc.) or differences in political ideology may affect vaccine adoption–but they offer little
-              doubt that the COVID vaccines are effective at minimizing the death toll of the virus.</p>
-            <p class="col-md-8 fs-4">County View</p>
-            <p>The visualization indicates a very noticeable difference between the number of deaths in a county with
-              high vaccination rates (Kent, RI) and the number of deaths in a county with low vaccination rates
-              (Tuscaloosa, AL). It is important to note that this analysis only compares two specific counties and does
-              not take into consideration other relevant factors such as mask wearing and social distancing. However, it
-              is still interesting to see that the conclusion from the analysis of all U.S. counties is the same as the
-              analysis from individual county perspective.</p>
+            <p class="col-md-8 fs-4">Repository Changes</p>
+            <p>The major changes used to update the visualizations came from expanding the timeframe to stretch beyond the 
+				original six months used by the Spring 2022 DS5010 class and come to current day, which means that the visualizations
+				span the timeframe of May 2021 to January 2023. In the process of updating the timeframe, we also made changes to the visualization,
+				by mapping the comparison with seaborn rather than with matplotlib and by ensuring that the gif was in chronological order.</p>
+            <p>However, the Spring 2023 DS5010 class made additional changes, including reduced hard-coding, code simplification, and deleting some
+				extra files. We also added a .yml file and addressed compatibility issues caused by updates to packages, although a fuller history of what we
+				identified and addressed as issues can be found at the <a
+              href="https://github.com/ds5010/vaccines-3/issues">vaccines-3 issue log</a>.</p>
           </div>
         </div>
 
@@ -169,8 +148,8 @@
           <div class="p-10 mb-6 bg-light rounded-3" id="acknowledgements">
             <div class="container-fluid py-5">
               <p class="col-md-8 fw-bold fs-4">Acknowledgements</p>
-              <p>For more information about the contributors of this project, please visit the <a
-                  href="https://github.com/ds5010/vaccines/graphs/contributors">project repository</a>.</p>
+              <p>For more information about the original project, please visit the <a
+                  href="https://github.com/ds5010/vaccines">project repository</a>.</p>
               <p>The inspiration to visualize vaccine rate v death rate for this project came from the following NPR
                 article: <a
                   href="https://www.npr.org/sections/health-shots/2021/12/05/1059828993/data-vaccine-misinformation-trump-counties-covid-death-rate">Pro-Trump
@@ -179,7 +158,7 @@
           </div>
 
           <footer class="pt-3 mt-4 text-muted border-top">
-            &copy; 2022 DS5010
+            &copy; 2023 DS5010
           </footer>
         </div><!-- .container -->
 
