@@ -17,6 +17,7 @@ def fips_to_name(FIPS):
     return map[FIPS]
 
 def comparison(FIPS_1='44003', FIPS_2='01125'):
+    # read data from months.csv and create dataframe
     df_m = pd.read_csv("months.csv")
     df_m['date2']=df_m['date'].apply(lambda x: datetime.datetime.strptime(x, "%m-%d-%Y"))
     df_m = df_m.iloc[1:]
@@ -24,6 +25,7 @@ def comparison(FIPS_1='44003', FIPS_2='01125'):
     df_m.set_index('date', inplace = True)
     df_m.drop(columns=['date2'], inplace = True)
 
+    # create merged dataframe for dates and data according to month
     file_list = []
     for csv_date, month in df_m.iterrows():
         df = pd.read_csv('data/Merge/vaccinations-and-deaths-' + csv_date +'.csv', converters={'FIPS' : str})
@@ -32,10 +34,11 @@ def comparison(FIPS_1='44003', FIPS_2='01125'):
         file_list.append(df)    
 
     merged_df = pd.concat(file_list)
-    print(merged_df.head())
+    # print(merged_df.head())
     cleaned_df = merged_df[merged_df['FIPS'].str.contains(FIPS_1+"|"+FIPS_2)]
-    print(cleaned_df.head())
+    # print(cleaned_df.head())
 
+    # create plot using seaborn with readable axes
     ax1 = sns.barplot(data=cleaned_df, x="Month", y="Series_Complete_18PlusPop_Pct", hue="Recip_County")
     ax2 = sns.lineplot(data=cleaned_df, axes=ax1.twinx(), x="Month", y="Deaths_Per_1e5", hue="Recip_County")
 
