@@ -1,6 +1,6 @@
-# Exploring COVID-19 Vaccine Effectiveness
+# COVID-19 Vaccine Effectiveness
 
-This project is an exploratory data analysis (EDA) of COVID-19 vaccine effectiveness. The team decided to examine commonly used COVID-19 information sources ([Center For Disease Control and Prevention](https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh) and [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19/tree/f57525e860010f6c5c0c103fd97e2e7282b480c8)) and visualize the relationship between Covid-19 vaccinations and deaths the United States between 5/31/21 - 11/30/21. 
+This site displays the updated changes made to a repo an exploratory data analysis (EDA) of COVID-19 vaccine effectiveness. The team decided to examine commonly used COVID-19 information sources ([Center For Disease Control and Prevention](https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh) and [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19/tree/f57525e860010f6c5c0c103fd97e2e7282b480c8)) and visualize the relationship between Covid-19 vaccinations and deaths the United States between 5/31/21 - 11/30/21. 
 
 For more information about the data (including the data processing/cleaning preformed for this project), please visit the [project repository.](https://github.com/ds5010/vaccines) 
 
