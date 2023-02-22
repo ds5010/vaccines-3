@@ -11,6 +11,11 @@ img: clean-img scatters comparison animation
 # Make everything (including refreshing data)
 all: clean data cdc vaccines deaths merge scatters animation comparison
 
+# Create environment and activate environment
+env:
+	conda env create -f environment.yml
+	conda activate vax3env
+
 ###### Specific Commands ######
 # Make the data directory
 .PHONY: data # lets us use "make data" even though data/ is also a directory
