@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
+import seaborn as sns
 import pandas as pd
 import numpy as np
+import datetime
 from collections import defaultdict
 import sys
 
@@ -14,15 +16,25 @@ def fips_to_name(FIPS):
     return map[FIPS]
 
 def comparison(FIPS_1='44003', FIPS_2='01125'):
-    months = {
+    df_m = pd.read_csv("months.csv")
+
+    df_m['date2']=df_m['data'].apply(lambda x: datetime.datetime.strptime(x, "%m-%d-%Y"))
+    
+    
+    '''months = {
         'May':'05-31-2021',
         'June':'06-30-2021',
         'July':'07-31-2021',
         'August':'08-31-2021',
         'September':'09-30-2021',
         'October':'10-31-2021',
-        'November':'11-30-2021'
-        }
+        'November':'11-30-2021',
+        'December':'12-31-2021',
+        'January':'01-31-2022',
+        'February':'02-28-2022',
+        'March':'03-31-2022',
+        'cont....'
+        }'''
     file_list = []
     for month, csv_date in months.items():
         df = pd.read_csv('data/Merge/vaccinations-and-deaths-' + csv_date +'.csv', converters={'FIPS' : str})
