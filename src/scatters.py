@@ -60,6 +60,7 @@ def scatter(month):
 
     plt.tight_layout()    
     plt.savefig('img/'+month+'.png')
+    plt.close('all')
 
 def create_scatters():
     """This function creates seven scatter plots based on the merged data.
