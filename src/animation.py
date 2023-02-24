@@ -16,7 +16,7 @@ def create_gif(filename_save):
     images = list()
 
     #this part looks at the img directory and reads in all the files that end with .png (only going to bring in those)
-    for filename in sorted(os.listdir('img')),key= lambda x: os.path.getmtime(os.path.join('img',x))):
+    for filename in sorted(os.listdir('img'),key= (lambda x: os.path.getmtime(os.path.join('img',x)))):
         if filename[-4:] == '.png' and not filename == 'comparison.png':
             f = os.path.join('img',filename)
             im = iio.imread(f)
