@@ -69,7 +69,6 @@ The differences between Kent, RI and Tuscaloosa, AL seems to remain even so. The
 
 The visualization additionally retains a very noticeable difference between the number of deaths in Kent county and that of Tuscaloosa, AL. 
 
-
 However, it is still interesting to see that the conclusion from the analysis of all U.S. counties is the same as the analysis from individual county perspective.
 
 ## Acknowledgements
@@ -78,7 +77,6 @@ The inspiration to visualize vaccine rate v death rate for this project came fro
 
 
 ### Contributors
-![alt text](https://github.com/ds5010/vaccines/raw/MatthewjRay_Assigment05/Screen%20Shot%202022-03-01%20at%204.29.38%20PM.png)
 
 [Philip Bogden](https://github.com/pbogden) | [Wendy Thress](https://github.com/WendyThress-Roux) | [Tom Henehan](https://github.com/tom2470) |
-[Mohammed Shati](https://github.com/Moshati1315) | [Dan O'Brien](https://github.com/dobnu) | [Funmi Somoye](/https://github.com/FunmiSomoye-schl)[Philip Tran](https://github.com/Phitran-neu) | [Mitch Hornsby](https://github.com/mhorns) | [Jayati Samar](https://github.com/smr-j) | [Peter Sternhagen](https://github.com/petersternhagen) | [Joe Schweiss](https://github.com/joschw01)
+[Mohammed Shati](https://github.com/Moshati1315) | [Dan O'Brien](https://github.com/dobnu) | [Funmi Somoye](/https://github.com/FunmiSomoye-schl) | [Philip Tran](https://github.com/Phitran-neu) | [Mitch Hornsby](https://github.com/mhorns) | [Jayati Samar](https://github.com/smr-j) | [Peter Sternhagen](https://github.com/petersternhagen) | [Joe Schweiss](https://github.com/joschw01)
